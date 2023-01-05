@@ -18,19 +18,50 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     private class QueueIterator implements Iterator<Item> {
-        private Node current = sentinel.next;
+        private Node first = sentinel.next;
+        private Item[] items;
+        private boolean[] accessed;
+
+        public QueueIterator() {
+            Node n = first;
+            int s = 0;
+            for (; n != null; n = n.next) {
+                s++;
+            }
+            items = (Item[]) new Object[s];
+            accessed = new boolean[s];
+            n = first;
+            for (int i = 0; i < items.length; i++) {
+                items[i] = n.item;
+                n = n.next;
+                accessed[i] = false;
+            }
+        }
 
         public boolean hasNext() {
-            return current != null;
+            for (int i = 0; i < accessed.length; i++) {
+                if (!accessed[i]) {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public Item next() {
             if (!hasNext()) {
                 throw new NoSuchElementException("Queue underflow");
             }
-            Item item = current.item;
-            current = current.next;
-            return item;
+            int s = items.length;
+            int index = StdRandom.uniformInt(s);
+            while (accessed[index]) {
+                index = StdRandom.uniformInt(s);
+            }
+            accessed[index] = true;
+            Node n = first;
+            for (int i = 0; i < index; i++) {
+                n = n.next;
+            }
+            return n.item;
         }
 
         public void remove() {
@@ -112,12 +143,10 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         r.enqueue(11);
         r.enqueue(12);
         r.enqueue(13);
-        System.out.println(r.size());
-        System.out.println(r.dequeue());
-        System.out.println(r.size());
-        System.out.println(r.sample());
-        System.out.println(r.sample());
-        System.out.println(r.sample());
-
+        RandomizedQueue.QueueIterator a = (RandomizedQueue.QueueIterator) r.iterator();
+        System.out.println(a.next());
+        System.out.println(a.next());
+        System.out.println(a.next());
+        System.out.println(a.hasNext());
     }
 }
