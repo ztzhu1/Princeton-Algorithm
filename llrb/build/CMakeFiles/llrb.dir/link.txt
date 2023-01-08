@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -Wall -Werror CMakeFiles/llrb.dir/llrb.cpp.o CMakeFiles/llrb.dir/main.cpp.o -o llrb  -lfmt 
