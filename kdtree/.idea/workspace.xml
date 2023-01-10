@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c1e4f978-b3bd-4ae1-84e9-9e1170bce808" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KdTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/KdTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KdTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/KdTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PointSET.class" beforeDir="false" afterPath="$PROJECT_DIR$/PointSET.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PointSET.java" beforeDir="false" afterPath="$PROJECT_DIR$/PointSET.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +93,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ztzhu/courses/Princeton-Algorithm/kdtree",
+    "last_opened_file_path": "/home/ztzhu/courses/Princeton-Algorithm/wordnet",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -137,7 +133,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673104975604</updated>
-      <workItem from="1673104976725" duration="20041000" />
+      <workItem from="1673104976725" duration="20644000" />
+      <workItem from="1673330346851" duration="104000" />
     </task>
     <servers />
   </component>
