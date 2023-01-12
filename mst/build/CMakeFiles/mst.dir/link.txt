@@ -1,0 +1,1 @@
+/usr/bin/c++  -O2 -Wall -Werror CMakeFiles/mst.dir/UF.cpp.o CMakeFiles/mst.dir/main.cpp.o CMakeFiles/mst.dir/mst.cpp.o CMakeFiles/mst.dir/shortest_path.cpp.o -o mst  -lfmt 
